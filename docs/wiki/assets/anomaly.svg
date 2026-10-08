@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img"><title>An unusual row outside a representation cluster</title><style>
+@media (prefers-color-scheme: dark) {
+  [fill="#edf3ff"] { fill: #202d43; }
+  [fill="#3964fe"] { fill: #9db8ff; }
+  [stroke="#3964fe"] { stroke: #9db8ff; }
+  [stroke="#b5c9ff"] { stroke: #6487ce; }
+  [fill="#d97706"] { fill: #fbbf24; }
+  [stroke="#d97706"] { stroke: #fbbf24; }
+  [stroke="#475569"] { stroke: #a4b1c5; }
+}
+</style><rect width="240" height="120" rx="12" fill="#edf3ff"/><ellipse cx="88" cy="64" rx="46" ry="32" fill="#3964fe" opacity=".1"/><circle cx="76" cy="44" r="5" fill="#3964fe"/><circle cx="87" cy="58" r="5" fill="#3964fe"/><circle cx="69" cy="66" r="5" fill="#3964fe"/><circle cx="100" cy="41" r="5" fill="#3964fe"/><circle cx="102" cy="66" r="5" fill="#3964fe"/><circle cx="88" cy="78" r="5" fill="#3964fe"/><circle cx="188" cy="31" r="12" fill="none" stroke="#d97706" stroke-width="2"/><circle cx="188" cy="31" r="5" fill="#d97706"/><path d="m127 52 44-15" stroke="#d97706" stroke-width="2" stroke-dasharray="4 5"/></svg>

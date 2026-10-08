@@ -138,21 +138,16 @@ lightning_logs/
 # Project data and experiment outputs
 artifacts/
 checkpoints/
+!src/tabforge/checkpoints/
+src/tabforge/checkpoints/*
+!src/tabforge/checkpoints/__init__.py
+!src/tabforge/checkpoints/canonical.py
+!src/tabforge/checkpoints/README.md
 ckpt/
 results/
 
 # Local project directories and files
 .agent
-
-# Source directories that are intentionally tracked
-!src/tabforge/src/tabforge/artifacts/
-!src/tabforge/src/tabforge/artifacts/**
-src/tabforge/src/tabforge/artifacts/**/__pycache__/
-src/tabforge/src/tabforge/artifacts/**/__pycache__/**
-!src/tabforge/src/tabforge/checkpoints/
-!src/tabforge/src/tabforge/checkpoints/**
-src/tabforge/src/tabforge/checkpoints/**/__pycache__/
-src/tabforge/src/tabforge/checkpoints/**/__pycache__/**
 
 # Generated reports and analysis outputs
 *.xlsx
@@ -163,7 +158,6 @@ analysis/**/results*
 docs/wiki/_build/
 docs/wiki/_static/
 docs/wiki/_templates/
-src/tabstruct/generation/models/custom/latent/pretrain/
 
 # Tooling and local environments
 .mypy_cache/

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img">
+  <title>TabFORGE mark: a structured table with an angled hammer</title>
+  <rect x="4" y="4" width="72" height="72" rx="18" fill="#3459d9"/>
+  <g fill="#fff">
+    <rect x="18" y="22" width="12" height="10" rx="2"/>
+    <rect x="35" y="22" width="12" height="10" rx="2"/>
+    <rect x="18" y="37" width="12" height="10" rx="2"/>
+    <rect x="35" y="37" width="12" height="10" rx="2"/>
+    <rect x="18" y="52" width="12" height="10" rx="2"/>
+    <rect x="35" y="52" width="12" height="10" rx="2"/>
+  </g>
+  <g fill="#fbbf24" transform="rotate(-30 59 28)">
+    <rect x="57" y="30" width="4" height="15" rx="1"/>
+    <rect x="50" y="24" width="18" height="8" rx="1.5"/>
+  </g>
+  <rect x="52" y="52" width="12" height="10" rx="2" fill="#fbbf24"/>
+</svg>
