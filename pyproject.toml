@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tabforge-ml"
-version = "2026.8.9"
+version = "2026.10.08"
 description = "Tabular foundation model for generation, prediction, imputation, representations, clustering, and anomaly detection."
 readme = "README.md"
 requires-python = ">=3.10"

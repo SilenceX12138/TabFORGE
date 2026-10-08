@@ -13,7 +13,7 @@
 </div>
 
 > [!IMPORTANT]
-> **[TabFORGE: A Tabular Foundation Model for Generative Modelling](https://arxiv.org/abs/2605.09424)** — accepted at NeurIPS 2026.
+> Official code for the paper **[TabFORGE: A Tabular Foundation Model for Generative Modelling](https://arxiv.org/abs/2605.09424)**, accepted at NeurIPS 2026.
 >
 > **Authors:** Xiangjian Jiang, Mingxuan Liu, Nikola Simidjievski, Tassilo Klein, and Mateja Jamnik
 >
