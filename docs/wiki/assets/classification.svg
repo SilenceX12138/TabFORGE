@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title">
+  <title id="title">Classification assigns discrete class labels and probabilities</title><style>
+@media (prefers-color-scheme: dark) {
+  [fill="#edf3ff"] { fill: #202d43; }
+  [fill="#3964fe"] { fill: #9db8ff; }
+  [stroke="#3964fe"] { stroke: #9db8ff; }
+  [stroke="#b5c9ff"] { stroke: #6487ce; }
+  [fill="#d97706"] { fill: #fbbf24; }
+  [stroke="#d97706"] { stroke: #fbbf24; }
+  [stroke="#475569"] { stroke: #a4b1c5; }
+}
+</style>
+  <rect width="240" height="120" rx="12" fill="#edf3ff"/>
+  <g fill="#b5c9ff"><rect x="25" y="32" width="52" height="13" rx="3"/><rect x="25" y="53" width="52" height="13" rx="3"/><rect x="25" y="74" width="52" height="13" rx="3"/></g>
+  <path d="M90 60h30m-7-7 7 7-7 7" fill="none" stroke="#3964fe" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#3964fe"><rect x="143" y="29" width="25" height="18" rx="5"/><rect x="143" y="71" width="25" height="18" rx="5"/></g><rect x="143" y="50" width="25" height="18" rx="5" fill="#d97706"/>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="middle"><text x="155" y="42">A</text><text x="155" y="63">B</text><text x="155" y="84">A</text></g>
+  <g fill="#b5c9ff"><rect x="177" y="34" width="35" height="8" rx="3"/><rect x="177" y="55" width="24" height="8" rx="3"/><rect x="177" y="76" width="31" height="8" rx="3"/></g>
+  <text x="178" y="106" fill="#475569" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700">CLASS PROBABILITIES</text>
+</svg>

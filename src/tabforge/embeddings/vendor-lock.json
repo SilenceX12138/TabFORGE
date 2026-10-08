@@ -1,0 +1,15 @@
+{
+  "tabpfn_version": "v2.5",
+  "checkpoints": {
+    "classification": {
+      "repository": "Prior-Labs/tabpfn_2_5",
+      "revision": "7aba50b2dd7f625b77298e318263250a8d1e601d",
+      "filename": "tabpfn-v2.5-classifier-v2.5_default.ckpt"
+    },
+    "regression": {
+      "repository": "Prior-Labs/tabpfn_2_5",
+      "revision": "7aba50b2dd7f625b77298e318263250a8d1e601d",
+      "filename": "tabpfn-v2.5-regressor-v2.5_default.ckpt"
+    }
+  }
+}

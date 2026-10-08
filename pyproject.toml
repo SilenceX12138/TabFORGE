@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tabforge-ml"
+version = "2026.8.9"
+description = "Tabular foundation model for generation, prediction, imputation, representations, clustering, and anomaly detection."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Xiangjian Jiang", email = "silencejiang12138@gmail.com" },
+]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch",
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-learn",
+  "einops",
+  "huggingface-hub",
+  "joblib",
+  "packaging",
+  "pydantic",
+  "pydantic-settings",
+  "typing-extensions",
+  "networkx",
+  "kditransform",
+  "tabcamel",
+  "tabeval",
+]
+
+[project.optional-dependencies]
+dev = ["build", "flake8", "nbconvert", "pylint", "pytest", "pytest-cov"]
+tutorials = ["jupyter", "tabpfn"]
+wandb = ["wandb"]
+
+[project.urls]
+Homepage = "https://silencex12138.github.io/TabFORGE/"
+Documentation = "https://silencex12138.github.io/TabFORGE/"
+Repository = "https://github.com/SilenceX12138/TabFORGE"
+Issues = "https://github.com/SilenceX12138/TabFORGE/issues"
+Paper = "https://arxiv.org/abs/2605.09424"
+Models = "https://huggingface.co/XiangjianJiang/TabFORGE"
+
+[project.scripts]
+tabforge = "tabforge.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tabforge"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/tests",
+  "/docs",
+  "/README.md",
+  "/LICENSE",
+  "/scripts/utils/style_check.sh",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

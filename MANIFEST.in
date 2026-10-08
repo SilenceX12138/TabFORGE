@@ -1,0 +1,4 @@
+recursive-include src/tabforge *.py *.pt *.json
+recursive-include src/tabforge/checkpoints *.md *.pt
+recursive-include LICENSE
+include README.md

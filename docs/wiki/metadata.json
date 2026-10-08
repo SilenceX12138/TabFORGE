@@ -1,0 +1,24 @@
+{
+  "documentation": "TabFORGE",
+  "conference": "NeurIPS 2026",
+  "pages": [
+    "overview.md",
+    "getting_started.md",
+    "user_guide.md",
+    "tutorials.md",
+    "cli.md",
+    "paper.md",
+    "public_estimator_api.md",
+    "public_estimator_api_estimators.md",
+    "configuration.md",
+    "public_estimator_api_lifecycle.md",
+    "Tabular_representation_pipeline.md",
+    "tabular_feature_processing.md",
+    "tabpfn_embedding_adapter.md",
+    "Latent_diffusion_learning_engine.md",
+    "latent_diffusion_model.md",
+    "training_orchestration.md",
+    "User-facing_estimator_and_configuration_interface.md",
+    "development.md"
+  ]
+}

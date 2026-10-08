@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
+  <title id="title">TabFORGE: one foundation model, many downstream tasks</title>
+  <desc id="description">Mixed-type tables are adapted through a shared pretrained TabFORGE backbone. Task-specific estimators support generation, classification, regression, embeddings, imputation, clustering, and anomaly detection.</desc>
+  <style>
+    :root { --canvas: #f5f8ff; --soft: #edf3ff; --panel: #fff; --ink: #172554; --muted: #475569; --cell: #b5c9ff; --border: #d4e0ff; }
+    @media (prefers-color-scheme: dark) {
+      :root { --canvas: #192334; --soft: #202d43; --panel: #222e43; --ink: #dbe6ff; --muted: #a4b1c5; --cell: #6487ce; --border: #405473; }
+      [stroke="#3964fe"] { stroke: #9db8ff; }
+      [fill="#3964fe"] { fill: #9db8ff; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#3964fe"/></marker>
+    <pattern id="cells" width="40" height="30" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="32" height="22" rx="4" fill="var(--cell)"/></pattern>
+    <g id="table"><rect width="172" height="108" rx="10" fill="var(--panel)" stroke="var(--border)" stroke-width="2"/><path d="M10 12h150v84H10z" fill="url(#cells)"/><rect x="130" y="15" width="32" height="22" rx="4" fill="#fbbf24"/><rect x="130" y="45" width="32" height="22" rx="4" fill="#d97706"/><rect x="130" y="75" width="32" height="22" rx="4" fill="#fde68a"/></g>
+  </defs>
+  <rect width="1280" height="640" rx="20" fill="var(--canvas)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g fill="var(--muted)" font-size="15" font-weight="700" letter-spacing="2">
+      <text x="50" y="58">MIXED-TYPE TABLES</text>
+      <text x="369" y="58">SHARED FOUNDATION MODEL</text>
+      <text x="849" y="58">DOWNSTREAM TASKS</text>
+    </g>
+    <rect x="48" y="94" width="230" height="480" rx="18" fill="var(--soft)" stroke="var(--border)"/>
+    <use href="#table" x="68" y="149" transform="rotate(-7 154 203)"/>
+    <use href="#table" x="85" y="251" transform="rotate(5 171 305)"/>
+    <use href="#table" x="68" y="351" transform="rotate(-4 154 405)"/>
+    <text x="163" y="502" text-anchor="middle" fill="var(--ink)" font-size="19" font-weight="700">Your table &amp; schema</text>
+    <text x="163" y="532" text-anchor="middle" fill="var(--muted)" font-size="16">Numerical · Categorical</text>
+    <path d="M279 324h69" stroke="#3964fe" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <rect x="359" y="174" width="374" height="299" rx="22" fill="#17356b"/>
+    <rect x="383" y="198" width="187" height="29" rx="14" fill="#3459d9"/>
+    <text x="476" y="218" text-anchor="middle" fill="#d4e0ff" font-size="13" font-weight="700" letter-spacing="1">PRETRAINED BACKBONE</text>
+    <text x="389" y="282" fill="#fff" font-size="43" font-weight="700">TabFORGE</text>
+    <text x="389" y="320" fill="#e4edff" font-size="22">Tabular foundation model</text>
+    <path d="M389 345h312" stroke="#7194ee"/>
+    <text x="389" y="380" fill="#d4e0ff" font-size="20">Encode · Diffuse · Decode</text>
+    <text x="389" y="419" fill="#e4edff" font-size="17">Contextual feature embeddings</text>
+    <text x="389" y="446" fill="#e4edff" font-size="17">Adaptation to your dataset</text>
+    <g fill="none" stroke="#3964fe" stroke-width="2.5">
+      <path d="M734 324h61M795 124v420"/>
+      <path d="M795 124h43M795 194h43M795 264h43M795 334h43M795 404h43M795 474h43M795 544h43"/>
+    </g>
+    <g fill="var(--panel)" stroke="var(--border)" stroke-width="1.5">
+      <rect x="849" y="94" width="383" height="60" rx="12"/>
+      <rect x="849" y="164" width="383" height="60" rx="12"/>
+      <rect x="849" y="234" width="383" height="60" rx="12"/>
+      <rect x="849" y="304" width="383" height="60" rx="12"/>
+      <rect x="849" y="374" width="383" height="60" rx="12"/>
+      <rect x="849" y="444" width="383" height="60" rx="12"/>
+      <rect x="849" y="514" width="383" height="60" rx="12"/>
+    </g>
+    <g fill="var(--soft)"><rect x="862" y="106" width="36" height="36" rx="8"/><rect x="862" y="176" width="36" height="36" rx="8"/><rect x="862" y="246" width="36" height="36" rx="8"/><rect x="862" y="316" width="36" height="36" rx="8"/><rect x="862" y="386" width="36" height="36" rx="8"/><rect x="862" y="456" width="36" height="36" rx="8"/><rect x="862" y="526" width="36" height="36" rx="8"/></g>
+    <g stroke="#3964fe" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M869 114h22v20h-22zM869 121h22M869 127h22M876 114v20M883 114v20"/>
+      <path d="M880 183v8m-9 12v-7h18v7"/><circle cx="880" cy="184" r="2" fill="#3964fe"/><circle cx="871" cy="204" r="3" fill="#3964fe"/><circle cx="889" cy="204" r="3" fill="#d97706" stroke="#d97706"/>
+      <path d="M869 253v22h23M873 270l6-8 6 3 7-12"/>
+      <path d="m869 328 11-6 12 6-12 6Zm0 6 11 6 12-6m-23 6 11 6 12-6"/>
+      <path d="M869 394h22v20h-22zM869 401h22M869 408h22M876 394v20M883 394v20"/><rect x="877" y="402" width="5" height="5" fill="#d97706" stroke="none"/>
+      <circle cx="872" cy="468" r="3"/><circle cx="874" cy="479" r="3"/><circle cx="883" cy="472" r="3"/><circle cx="890" cy="481" r="3" stroke="#d97706"/>
+      <circle cx="873" cy="541" r="3"/><circle cx="880" cy="550" r="3"/><circle cx="887" cy="537" r="5" stroke="#d97706"/>
+    </g>
+    <g fill="var(--ink)" font-size="23" font-weight="700">
+      <text x="915" y="132">Synthetic data generation</text>
+      <text x="915" y="202">Classification</text>
+      <text x="915" y="272">Regression</text>
+      <text x="915" y="342">Embedding</text>
+      <text x="915" y="412">Missing-value imputation</text>
+      <text x="915" y="482">Clustering</text>
+      <text x="915" y="552">Anomaly detection</text>
+    </g>
+    <text x="640" y="613" text-anchor="middle" fill="var(--muted)" font-size="18">A shared backbone, with task-specific estimators and downstream heads.</text>
+  </g>
+</svg>

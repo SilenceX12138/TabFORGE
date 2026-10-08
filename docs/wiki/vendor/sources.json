@@ -1,0 +1,12 @@
+{
+  "highlight-github.css": "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css",
+  "highlight-github-dark.css": "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css",
+  "highlight.min.js": "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js",
+  "mermaid.min.js": "https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js",
+  "marked.min.js": "https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js",
+  "marked-gfm-heading-id.js": "https://cdn.jsdelivr.net/npm/marked-gfm-heading-id@3.1.3/lib/index.umd.js",
+  "highlight-LICENSE": "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/LICENSE",
+  "mermaid-LICENSE": "https://cdn.jsdelivr.net/npm/mermaid@11.9.0/LICENSE",
+  "marked-LICENSE": "https://cdn.jsdelivr.net/npm/marked@11.0.0/LICENSE.md",
+  "marked-gfm-heading-id-LICENSE": "https://cdn.jsdelivr.net/npm/marked-gfm-heading-id@3.1.3/LICENSE"
+}

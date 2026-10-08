@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TabFORGE — Documentation</title>
+    <meta name="description" content="TabFORGE: a tabular foundation model for generative modelling. NeurIPS 2026. Guides, estimator reference, and notebook tutorials." />
+    <link rel="icon" href="assets/tabforge-mark.svg" type="image/svg+xml" />
+    <script>
+      // Apply persisted theme before first paint to avoid a flash of the wrong theme
+      (function () {
+        try {
+          var theme = localStorage.getItem("codewiki-theme");
+          if (!theme) {
+            theme =
+              window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          }
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link
+      rel="stylesheet"
+      href="vendor/highlight-github.css"
+      id="hljs-theme-light"
+    />
+    <link
+      rel="stylesheet"
+      href="vendor/highlight-github-dark.css"
+      id="hljs-theme-dark"
+      disabled
+    />
+    <script src="vendor/highlight.min.js"></script>
+    <script src="vendor/mermaid.min.js"></script>
+    <script src="vendor/marked.min.js"></script>
+    <script src="vendor/marked-gfm-heading-id.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+      <a class="brand" href="#/overview.md"><img src="assets/tabforge-mark.svg" alt="" width="44" height="44" /><span>TabFORGE</span></a>
+      <nav class="top-links" aria-label="Main navigation">
+        <a href="#/getting_started.md" data-page="getting_started.md">Install</a>
+        <a href="#/user_guide.md" data-page="user_guide.md">User Guide</a>
+        <a href="#/public_estimator_api.md" data-page="public_estimator_api.md">API</a>
+        <a href="#/tutorials.md" data-page="tutorials.md">Examples</a>
+        <a href="#/development.md" data-page="development.md">Inside TabFORGE</a>
+        <details class="header-more"><summary>More <span aria-hidden="true">⌄</span></summary><div class="header-dropdown"><a href="#/paper.md">Paper &amp; citation</a><a href="#/cli.md">Command line</a><a href="https://huggingface.co/XiangjianJiang/TabFORGE">Pretrained model ↗</a></div></details>
+      </nav>
+      <div class="header-tools">
+        <button class="icon-button search-trigger" id="open-search" type="button" aria-label="Search documentation" title="Search documentation (Ctrl+K)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span>Search docs</span><kbd>Ctrl K</kbd></button>
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">◐</button>
+        <a class="header-repo" href="https://github.com/SilenceX12138/TabFORGE" aria-label="TabFORGE on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.6 9.6 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+        <a class="header-release" href="#/paper.md">NeurIPS 2026</a>
+      </div>
+    </header>
+    <div class="backdrop" id="backdrop"></div>
+    <button class="sidebar-expand" id="sidebar-expand" type="button" aria-label="Show section navigation">Show sidebar ›</button>
+    <div class="container">
+      <nav class="sidebar" id="sidebar" aria-label="Documentation pages">
+        <button class="sidebar-collapse" id="sidebar-collapse" type="button">‹ Collapse sidebar</button>
+        <div class="sidebar-top"><span class="logo" id="section-title">Learn</span></div>
+        <label class="search-label" for="nav-filter">Filter navigation</label>
+        <input type="search" class="nav-filter" id="nav-filter" placeholder="Find a page…" aria-label="Filter documentation pages" autocomplete="off" />
+        <div id="navigation"></div>
+        <div class="sidebar-footer"><a href="#/paper.md">Accepted at NeurIPS 2026</a><a href="https://huggingface.co/XiangjianJiang/TabFORGE">Pretrained model ↗</a><a href="https://github.com/SilenceX12138/TabFORGE">Source on GitHub ↗</a></div>
+      </nav>
+      <main class="content" id="main-content" tabindex="-1">
+        <nav class="page-label" id="page-label" aria-label="Breadcrumb">Home</nav>
+        <details class="mobile-toc" id="mobile-toc"><summary>On this page</summary><nav aria-label="Page sections" id="mobile-toc-links"></nav></details>
+        <div class="content-inner no-toc">
+          <div class="doc-column">
+            <div id="loading" class="loading"><div class="loading-spinner"></div><p>Loading documentation…</p></div>
+            <article id="content" class="markdown-content" style="display: none"></article>
+            <nav id="pager" class="pager" aria-label="Previous and next page"></nav>
+            <footer class="site-footer">TabFORGE · NeurIPS 2026 · <a href="#/paper.md:citation">Cite the paper</a> · Apache 2.0</footer>
+          </div>
+          <aside class="toc" id="toc" aria-label="Table of contents"></aside>
+        </div>
+      </main>
+    </div>
+    <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
+      <div class="search-heading"><h2 id="search-title">Search the docs</h2><button class="icon-button" id="close-search" type="button" aria-label="Close search">×</button></div>
+      <label class="sr-only" for="doc-search">Search documentation content</label>
+      <div class="search-input-row"><input type="search" id="doc-search" placeholder="Search the docs…" autocomplete="off"><kbd>Esc</kbd></div>
+      <p class="search-status" id="search-status" role="status">Type to search guides, examples, and the API.</p>
+      <ul class="search-results" id="search-results"></ul>
+      <p class="search-help">Search all documentation · <kbd>Ctrl</kbd> + <kbd>K</kbd> or <kbd>/</kbd></p>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>

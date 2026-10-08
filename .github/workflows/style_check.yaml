@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "src/**"
+      - "scripts/utils/style_check.sh"
+      - ".github/workflows/style_check.yaml"
 
 jobs:
   code-style-check:
@@ -12,9 +14,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -25,14 +24,13 @@ jobs:
         uses: actions/cache@v6
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
-          # Install main package dependencies
-          uv pip install --system pytest flake8 pylint setuptools==75.1.0 sphinx myst-parser sphinx-rtd-theme sphinx-book-theme ipykernel
+          pip install flake8 pylint
 
       - name: Run style checks
         run: |

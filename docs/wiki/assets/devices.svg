@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title">
+  <title id="title">Single-device and distributed execution across workers</title><style>
+@media (prefers-color-scheme: dark) {
+  [fill="#edf3ff"] { fill: #202d43; }
+  [fill="#3964fe"] { fill: #9db8ff; }
+  [stroke="#3964fe"] { stroke: #9db8ff; }
+  [stroke="#b5c9ff"] { stroke: #6487ce; }
+  [fill="#d97706"] { fill: #fbbf24; }
+  [stroke="#d97706"] { stroke: #fbbf24; }
+  [stroke="#475569"] { stroke: #a4b1c5; }
+}
+</style>
+  <rect width="240" height="120" rx="12" fill="#edf3ff"/>
+  <g fill="none" stroke="#3964fe" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="37" width="57" height="39" rx="5"/><path d="M50 77v10m-13 0h26M83 56h30m-7-5 7 5-7 5M119 56h17V30h19M136 56h19M136 56v28h19"/><rect x="159" y="18" width="57" height="24" rx="5"/><rect x="159" y="45" width="57" height="24" rx="5"/><rect x="159" y="72" width="57" height="24" rx="5"/></g>
+  <rect x="35" y="47" width="28" height="18" rx="3" fill="#b5c9ff"/>
+  <g fill="#d97706"><circle cx="170" cy="30" r="3"/><circle cx="170" cy="57" r="3"/><circle cx="170" cy="84" r="3"/></g>
+  <g stroke="#b5c9ff" stroke-width="3"><path d="M179 30h26M179 57h26M179 84h26"/></g>
+  <g fill="#475569" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700"><text x="50" y="106">DEVICE</text><text x="186" y="111">WORKERS</text></g>
+</svg>

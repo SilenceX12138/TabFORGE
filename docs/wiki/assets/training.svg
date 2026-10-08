@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title">
+  <title id="title">Compare pretrained initialization with training from scratch</title><style>
+@media (prefers-color-scheme: dark) {
+  [fill="#edf3ff"] { fill: #202d43; }
+  [fill="#3964fe"] { fill: #9db8ff; }
+  [stroke="#3964fe"] { stroke: #9db8ff; }
+  [stroke="#b5c9ff"] { stroke: #6487ce; }
+  [fill="#d97706"] { fill: #fbbf24; }
+  [stroke="#d97706"] { stroke: #fbbf24; }
+  [stroke="#475569"] { stroke: #a4b1c5; }
+}
+</style>
+  <rect width="240" height="120" rx="12" fill="#edf3ff"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#475569"><text x="66" y="24">PRETRAINED</text><text x="176" y="24">FROM SCRATCH</text></g>
+  <g fill="none" stroke="#3964fe" stroke-width="2" stroke-linejoin="round"><rect x="37" y="34" width="58" height="42" rx="6"/><rect x="147" y="34" width="58" height="42" rx="6" stroke-dasharray="4 3"/><path d="M46 46h39M46 55h39M46 64h39M156 46h39M156 55h39M156 64h39" stroke="#b5c9ff"/><path d="m66 80 27 14m83-14-27 14"/></g>
+  <path d="m62 51 4-8 4 8 8 4-8 4-4 8-4-8-8-4Z" fill="#d97706"/>
+  <g fill="#3964fe"><circle cx="157" cy="46" r="3"/><circle cx="175" cy="55" r="3"/><circle cx="193" cy="64" r="3"/></g>
+  <rect x="96" y="85" width="48" height="23" rx="5" fill="#3964fe"/><text x="120" y="100" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700">FIT</text>
+</svg>
