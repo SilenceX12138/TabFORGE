@@ -4,11 +4,13 @@
 
 # [NeurIPS 2026] TabFORGE: A Tabular Foundation Model for Generative Modelling
 
+[![Paper](https://img.shields.io/badge/NeurIPS_2026-paper-3459d9?style=for-the-badge)](https://arxiv.org/abs/2605.09424)
 [![Docs](https://img.shields.io/badge/Documentation-Wiki-blue?style=for-the-badge)](https://silencex12138.github.io/TabFORGE/)
 [![PyPI](https://img.shields.io/pypi/v/tabforge-ml?style=for-the-badge)](https://pypi.org/project/tabforge-ml/)
 [![CI](https://img.shields.io/github/actions/workflow/status/SilenceX12138/TabFORGE/style_check.yaml?branch=master&label=CI&style=for-the-badge)](https://github.com/SilenceX12138/TabFORGE/actions/workflows/style_check.yaml)
 [![Hugging Face](https://img.shields.io/badge/Checkpoint-Hugging%20Face-yellow?style=for-the-badge)](https://huggingface.co/XiangjianJiang/TabFORGE)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
+[![Downloads](https://img.shields.io/pepy/dt/tabforge-ml?style=for-the-badge)](https://pypi.org/project/tabforge-ml/)
 
 </div>
 
@@ -41,8 +43,8 @@ regression, embedding, imputation, clustering, and anomaly detection.
 
 - One estimator interface for pandas DataFrames and NumPy arrays, with
   schema-aware numerical, categorical, and target handling.
-- Pretrained Structure-aware Feature Encoder and leakage-aware held-out-fold
-  embeddings for supervised training rows.
+- Pretrained TabFORGE model and
+  leakage-aware held-out-fold embeddings for supervised training rows.
 - Latent diffusion with EDM preconditioning, Karras-style schedules, and
   Euler/Heun sampling.
 - Canonical checkpoints for complete estimator restoration or data-free
@@ -77,9 +79,7 @@ pip install -e .
 
 You can also download the [source ZIP](https://github.com/SilenceX12138/TabFORGE/archive/refs/heads/master.zip).
 
-The default feature
-encoder and `checkpoint="pretrained"` use pretrained weights downloaded on
-first use. For offline examples, configure
+The default workflow uses the pretrained TabFORGE model with `checkpoint="pretrained"`. Model weights are downloaded on first use. For offline examples, configure
 `TabFORGEEmbeddingConfig(model_path="mock")` and use `checkpoint=None` to train
 all TabFORGE components from scratch.
 
@@ -197,22 +197,13 @@ restore model components.
 preprocessing state and the fitted context required for inference.
 `save_backbone_checkpoint(path)` stores reusable model weights without
 preprocessing state or training rows. Complete fitted checkpoints can contain
-provider training context; handle them as dataset
-data. Use a backbone checkpoint for data-free distribution.
-
-## 📚 Documentation
-
-- [Getting started](docs/wiki/getting_started.md) · [deployed guide](https://silencex12138.github.io/TabFORGE/#/getting_started.md)
-- [Tutorials](docs/wiki/tutorials.md) · [deployed gallery](https://silencex12138.github.io/TabFORGE/#/tutorials.md)
-- [User guide](docs/wiki/user_guide.md) · [deployed guide](https://silencex12138.github.io/TabFORGE/#/user_guide.md)
-- [Paper](docs/wiki/paper.md) · [deployed page](https://silencex12138.github.io/TabFORGE/#/paper.md)
-- [Estimator API](docs/wiki/public_estimator_api.md) · [Configuration](docs/wiki/configuration.md) · [Training](docs/wiki/training_orchestration.md) · [Checkpoint lifecycle](docs/wiki/public_estimator_api_lifecycle.md)
+provider training context. Use a backbone checkpoint for data-free distribution.
 
 ## 📖 Citation
 
 ```bibtex
-@inproceedings{jiang2026tabforge,
-  title     = {TabFORGE: A Tabular Foundation Model for Generative Modelling},
+@article{jiang2026tabforge,
+  title     = {{TabFORGE}: A Tabular Foundation Model for Generative Modelling},
   author    = {Jiang, Xiangjian and Liu, Mingxuan and Simidjievski, Nikola
                and Klein, Tassilo and Jamnik, Mateja},
   booktitle = {Advances in Neural Information Processing Systems},

@@ -34,7 +34,7 @@ pip install -e '.[tutorials]'
 
 Optional online logging is available with `pip install 'tabforge-ml[wandb]'`. See the [runtime settings](configuration.md#tabforgeruntimeconfig) for device selection and logging configuration.
 
-<aside class="doc-note" aria-label="Model requirements"><strong>Model requirements</strong><p>The Structure-aware Feature Encoder uses pretrained weights by default. Its first run may download model files. The example below uses <code>model_path="mock"</code> for a small CPU demonstration; use pretrained embeddings for real modelling.</p></aside>
+<aside class="doc-note" aria-label="Model requirements"><strong>Model requirements</strong><p>The default workflow uses the pretrained TabFORGE model, including its Structure-aware Feature Encoder, Score-based Diffusion Transformer, and Denoising-aligned Latent Decoder. The first run may download model weights. The example below uses <code>model_path="mock"</code> and <code>checkpoint=None</code> for a small CPU demonstration; use the pretrained TabFORGE model for real modelling.</p></aside>
 
 ## Generate a small synthetic table
 
@@ -71,13 +71,15 @@ synthetic = model.generate(n_samples=5, random_state=7)
 print(synthetic)
 ```
 
-The result is a five-row DataFrame with the original `age`, `region`, and `balance` columns. These demonstration settings verify the API; use pretrained components and a suitable training budget for useful synthetic data.
+The result is a five-row DataFrame with the original `age`, `region`, and `balance` columns. These demonstration settings verify the API; use the pretrained TabFORGE model and a suitable training budget for useful synthetic data.
 
 `task="unsupervision"` fits the generator to feature rows alone. For supervised generation, set `task` to `"classification"` or `"regression"`, pass `y` to `fit`, and `generate` returns an `(X, y)` pair.
 
-## Use the pretrained Structure-aware Feature Encoder
+<span id="use-the-pretrained-structure-aware-feature-encoder"></span>
 
-For real use, keep `model_path="auto"` (the default), provide enough data and training steps for your task, and select a device suitable for your workload. The default component checkpoint is loaded during fitting; pass `checkpoint=None` only when you intend to initialize components from scratch.
+## Use the pretrained TabFORGE model
+
+For real use, keep `model_path="auto"` and `checkpoint="pretrained"` (the defaults), provide enough data and training steps for your task, and select a device suitable for your workload. Fitting initializes the model from the official TabFORGE checkpoint and adapts it to your table. Pass `checkpoint=None` to initialize the diffusion and decoder components from scratch; the encoder still uses pretrained weights when `model_path="auto"`.
 
 Prepare `customer-table.csv` with columns `age`, `region`, and `balance` and at least 20 rows. Use your actual training table for this workflow; the eight-row mock table above only demonstrates the API.
 
@@ -92,7 +94,7 @@ model = TabFORGEGenerator(
     runtime_config=TabFORGERuntimeConfig(device="auto"),
     random_state=7,
 )
-model.fit(X_train)  # Uses the default pretrained components and encoder.
+model.fit(X_train)  # Fine-tunes the pretrained TabFORGE model.
 model.save_checkpoint("runs/customer-table")
 ```
 

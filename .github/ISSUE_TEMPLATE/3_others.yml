@@ -1,0 +1,67 @@
+name: 🆕 Other inquiries
+description: Raise a topic that does not fit the bug, feature, or question forms.
+title: "[Other]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before submitting
+
+        **You must follow this template and complete every required field. Issues that do not follow the template may receive no response.**
+
+        **Be kind and polite. Treat maintainers and other contributors with respect.**
+
+        Please search existing issues and use a clear, descriptive title. Choose this form when the bug report, feature request, and question forms do not fit your topic.
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Submission requirements
+      options:
+        - label: I have followed the template and completed all required fields.
+          required: true
+        - label: I agree to be kind and polite.
+          required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which operating system is relevant to this inquiry?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+        - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Provide your TabFORGE version or commit, or write "Not applicable" for general inquiries.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Inquiry description
+      description: Describe the topic and what response or outcome you are seeking.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant context
+      description: Provide background information that helps explain your inquiry.
+    validations:
+      required: true
+  - type: textarea
+    id: attempts
+    attributes:
+      label: Attempted solutions
+      description: Describe any approaches you have already tried, if applicable.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add any other useful details, screenshots, or links.

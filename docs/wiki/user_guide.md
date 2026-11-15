@@ -24,7 +24,7 @@ All estimators accept DataFrames or NumPy arrays. DataFrames preserve their colu
 
 The snippets below assume aligned `X_train`, `X_test`, `X_valid`, and targets have been prepared. `y_train` and `y_class_train` contain class labels; `y_regression_train` contains numeric targets. `X_incomplete` has the same columns as `X_train` with missing cells. The [tutorials](tutorials.md) include data preparation and complete runnable workflows.
 
-Fitting creates the feature processor, embedding context, and task-specific model state. In most workflows, use the official pretrained components with the default `checkpoint="pretrained"` argument. For component initialization from scratch, pass `checkpoint=None` explicitly. A validation split can be supplied as `validation_data`; classification and regression expect an `(X_valid, y_valid)` pair.
+Fitting creates the feature processor, embedding context, and task-specific model state. In most workflows, use the pretrained TabFORGE model with the default `checkpoint="pretrained"` argument. To initialize the diffusion and decoder components from scratch, pass `checkpoint=None` explicitly; the default Structure-aware Feature Encoder remains pretrained. A validation split can be supplied as `validation_data`; classification and regression expect an `(X_valid, y_valid)` pair.
 
 ```python
 from tabforge import TabFORGEClassifier
@@ -37,6 +37,18 @@ classifier.save_checkpoint("models/classifier")
 ```
 
 Restore a fitted estimator with `restore_from_checkpoint`. A fitted checkpoint contains the data-dependent state needed to use that trained estimator. `save_backbone_checkpoint` stores reusable Denoising-aligned Latent Decoder and diffusion weights without fitted dataset state; consult [checkpoint lifecycle](public_estimator_api_lifecycle.md) before choosing a format.
+
+## Generation
+
+Use `task="unsupervision"` for a feature-only table. Use `task="classification"` or `"regression"` and provide aligned targets to model a joint feature-target table. Generation starts from latent embeddings with random noise, denoises them, and decodes synthetic table values.
+
+```python
+from tabforge import TabFORGEGenerator
+
+generator = TabFORGEGenerator(task="unsupervision", random_state=7).fit(X_train)
+synthetic = generator.generate(1_000, random_state=7)
+generator.save_checkpoint("models/generator")
+```
 
 ## Prediction
 
@@ -54,18 +66,6 @@ regressor = TabFORGERegressor(n_prediction_samples=32, random_state=7)
 regressor.fit(X_train, y_regression_train)
 predictions = regressor.predict(X_test)
 intervals = regressor.predict_interval(X_test, alpha=0.05)
-```
-
-## Generation
-
-Use `task="unsupervision"` for a feature-only table. Use `task="classification"` or `"regression"` and provide aligned targets to model a joint feature-target table. Generation starts from latent embeddings with random noise, denoises them, and decodes synthetic table values.
-
-```python
-from tabforge import TabFORGEGenerator
-
-generator = TabFORGEGenerator(task="unsupervision", random_state=7).fit(X_train)
-synthetic = generator.generate(1_000, random_state=7)
-generator.save_checkpoint("models/generator")
 ```
 
 <span id="representations" aria-hidden="true"></span>

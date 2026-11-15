@@ -1,0 +1,48 @@
+name: 💡 Feature request
+description: Suggest an idea using the required template.
+title: "[Feature request]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before submitting
+
+        **You must follow this template and complete every required field. Issues that do not follow the template may receive no response.**
+
+        **Be kind and polite. Treat maintainers and other contributors with respect.**
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Submission requirements
+      options:
+        - label: I have followed the template and completed all required fields.
+          required: true
+        - label: I agree to be kind and polite.
+          required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the feature and the problem it would solve.
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Input
+      description: Describe the input or configuration the feature should accept, with an example if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Describe the expected result, with an example if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other useful details or examples.

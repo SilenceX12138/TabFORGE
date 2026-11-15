@@ -63,7 +63,7 @@ Start Jupyter from the checkout after installing the notebook dependencies:
 jupyter notebook docs/tutorial/notebooks
 ```
 
-The [tutorial gallery](tutorials.md) lists all examples and describes Colab setup. For lightweight verification, use mock embeddings with `checkpoint=None`; use the pretrained Structure-aware Feature Encoder for research results.
+The [tutorial gallery](tutorials.md) lists all examples and describes Colab setup. For lightweight verification, use mock embeddings with `checkpoint=None`; use the pretrained TabFORGE model for research results.
 
 ## Build the package
 
