@@ -53,7 +53,7 @@ Install the package and notebook dependencies in the Colab runtime before runnin
 %pip install "tabforge-ml[tutorials]"
 ```
 
-Select a GPU runtime for practical pretrained-model workloads. The first pretrained run downloads Structure-aware Feature Encoder and TabFORGE backbone weights; follow any model-access prompts. Mock examples use local deterministic embeddings. The device tutorial includes distributed terminal commands intended for your own multi-worker environment; run its single-device sections in Colab. Its pretrained CLI workflow exports the full training split, while the notebook can use the smaller row cap.
+Select a GPU runtime for practical pretrained-model workloads. The first pretrained run downloads the pretrained TabFORGE model weights, including those for its Structure-aware Feature Encoder; follow any model-access prompts. Mock examples use local deterministic embeddings. The device tutorial includes distributed terminal commands intended for your own multi-worker environment; run its single-device sections in Colab. Its pretrained CLI workflow exports the full training split, while the notebook can use the smaller row cap.
 
 ## Run locally
 

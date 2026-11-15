@@ -1,0 +1,71 @@
+name: 🤔 Questions and discussion
+description: Ask for help or discuss how to use TabFORGE.
+title: "[Discussion]: "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before submitting
+
+        **You must follow this template and complete every required field. Issues that do not follow the template may receive no response.**
+
+        **Be kind and polite. Treat maintainers and other contributors with respect.**
+
+        Please review the documentation and search existing issues before asking a question. Use the bug report or feature request form for those topics.
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Submission requirements
+      options:
+        - label: I have followed the template and completed all required fields.
+          required: true
+        - label: I agree to be kind and polite.
+          required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which operating system are you using?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which TabFORGE version or commit are you using?
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Describe your question clearly, including a code example or screenshot if useful.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain your use case and any solutions you have already tried.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add any other useful details or links.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How much does this question affect your work?
+      options:
+        - Low (review when available)
+        - Medium (would like a response soon)
+        - High (blocking progress)
+    validations:
+      required: true

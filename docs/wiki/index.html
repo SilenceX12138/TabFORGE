@@ -62,7 +62,6 @@
       </div>
     </header>
     <div class="backdrop" id="backdrop"></div>
-    <button class="sidebar-expand" id="sidebar-expand" type="button" aria-label="Show section navigation">Show sidebar ›</button>
     <div class="container">
       <nav class="sidebar" id="sidebar" aria-label="Documentation pages">
         <button class="sidebar-collapse" id="sidebar-collapse" type="button">‹ Collapse sidebar</button>
@@ -73,7 +72,10 @@
         <div class="sidebar-footer"><a href="#/paper.md">Accepted at NeurIPS 2026</a><a href="https://huggingface.co/XiangjianJiang/TabFORGE">Pretrained model ↗</a><a href="https://github.com/SilenceX12138/TabFORGE">Source on GitHub ↗</a></div>
       </nav>
       <main class="content" id="main-content" tabindex="-1">
-        <nav class="page-label" id="page-label" aria-label="Breadcrumb">Home</nav>
+        <div class="page-toolbar">
+          <button class="sidebar-expand" id="sidebar-expand" type="button" aria-label="Show section navigation" aria-controls="sidebar">Show sidebar ›</button>
+          <nav class="page-label" id="page-label" aria-label="Breadcrumb">Home</nav>
+        </div>
         <details class="mobile-toc" id="mobile-toc"><summary>On this page</summary><nav aria-label="Page sections" id="mobile-toc-links"></nav></details>
         <div class="content-inner no-toc">
           <div class="doc-column">

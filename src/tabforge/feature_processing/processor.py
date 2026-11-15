@@ -1,4 +1,4 @@
-"""Mixed-table preprocessing and schema-aware reconstruction for TabFORGE.
+"""Mixed-type table preprocessing and schema-aware reconstruction for TabFORGE.
 
 The processor owns the stable numerical-first layout shared by decoder losses,
 generation, imputation masks, and checkpoint schemas. It preserves original

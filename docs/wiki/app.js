@@ -211,17 +211,6 @@ function parseHash() {
   return { file: "overview.md", anchor: null };
 }
 
-function navigateTo(file, anchor) {
-  closeDrawer();
-  const target = buildHash(file, anchor);
-  if (location.hash === target) {
-    // Same URL (e.g. clicking the current link again): re-run manually
-    onHashChange();
-  } else {
-    location.hash = target;
-  }
-}
-
 function onHashChange() {
   closeDrawer();
   const route = parseHash();
@@ -324,6 +313,7 @@ async function loadDocument(filename, anchor) {
     if (token !== loadToken) return; // superseded by a newer navigation
 
     content.innerHTML = renderMarkdown(markdown);
+    rewriteDocumentLinks(content);
     loading.style.display = "none";
     content.style.display = "block";
     currentFile = filename;
@@ -474,6 +464,21 @@ function renderSearchResults() {
   }).join("");
 }
 
+function rewriteDocumentLinks(content) {
+  // Give links real router URLs so new tabs and copied links render the docs.
+  content.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(href)) return;
+
+    const match = href.match(/([^\/]*\.md)(?:#(.*))?$/i);
+    if (!match) return;
+
+    const filename = safeDecode(match[1]);
+    const anchor = match[2] ? safeDecode(match[2]) : null;
+    link.setAttribute("href", buildHash(filename, anchor));
+  });
+}
+
 function setupLinkInterception() {
   // One delegated listener covers markdown content, the TOC and
   // any other internal links.
@@ -499,18 +504,6 @@ function setupLinkInterception() {
         history.replaceState(null, "", buildHash(currentFile, slug));
       }
       return;
-    }
-
-    // Relative markdown links, optionally with an anchor
-    // (e.g. "Other_Module.md#some-section")
-    if (/^https?:/i.test(href)) return;
-    const mdMatch = href.match(/([^\/]*\.md)(?:#(.*))?$/i);
-    if (mdMatch) {
-      e.preventDefault();
-      e.stopPropagation();
-      const filename = safeDecode(mdMatch[1]);
-      const anchor = mdMatch[2] ? safeDecode(mdMatch[2]) : null;
-      navigateTo(filename, anchor);
     }
   });
 }
